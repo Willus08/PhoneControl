@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PhoneControl</string>
+    <string name="admin_receiver_status_disable_warning">warning</string>
+    <string name="admin_receiver_status_disabled">dissabled</string>
+    <string name="admin_receiver_status_pw_changed">password changed</string>
+    <string name="admin_receiver_status_enabled">enabled</string>
+    <string name="admin_receiver_status">alert</string>
+    <string name="add_admin_extra_app_text">
+        Additional text explaining why this needs to be added.</string>
+</resources>
