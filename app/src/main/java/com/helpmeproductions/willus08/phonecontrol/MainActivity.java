@@ -23,17 +23,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        adminName = new ComponentName(this,DeviceAdminReceiver.class);
+        adminName = new ComponentName(this,DeviceAdminSampleReciver.class);
         dpm = (DevicePolicyManager) getApplicationContext().getSystemService(Context.DEVICE_POLICY_SERVICE);
         setContentView(R.layout.activity_main);
-        
-        Toast.makeText(this, ""+dpm.isAdminActive(adminName), Toast.LENGTH_SHORT).show();
     }
 
     public void changeCamSetting(View view) {
 
         camCurrentlyDisabled = !camCurrentlyDisabled;
         dpm.setCameraDisabled(adminName,camCurrentlyDisabled);
+        Toast.makeText(this, "Camera Dissabled:" + camCurrentlyDisabled, Toast.LENGTH_SHORT).show();
 
     }
 
@@ -61,5 +60,7 @@ public class MainActivity extends AppCompatActivity {
             dpm.removeActiveAdmin(adminName);
 
         }
+        Toast.makeText(this, "Admin Enabled: " + mAdminActive, Toast.LENGTH_SHORT).show();
     }
 }
+

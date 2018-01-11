@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <!-- BEGIN_INCLUDE(device_admin_declaration) -->
-        <receiver android:name="MainActivity$DeviceAdminSample"
+        <receiver android:name=".DeviceAdminSampleReciver"
             android:label="Device Permisions"
             android:description="@string/admin_receiver_status"
             android:permission="android.permission.BIND_DEVICE_ADMIN">
